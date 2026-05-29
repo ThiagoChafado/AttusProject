@@ -1,0 +1,15 @@
+services:
+  api:
+    build: .
+    container_name: mundoinvest_api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persiste o banco SQLite fora do container
+      - sqlite_data:/data
+    environment:
+      - DATABASE_URL=sqlite:////data/app.db
+    restart: unless-stopped
+
+volumes:
+  sqlite_data:

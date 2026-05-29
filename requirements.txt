@@ -1,1 +1,7 @@
-fastapi uvicorn sqlalchemy pydantic email-validator pytest httpx
+fastapi 
+uvicorn 
+sqlalchemy 
+pydantic 
+pytest 
+httpx
+email-validator
